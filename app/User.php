@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function trainor(){
+        return $this->hasMany('App\Trainor');
+    }
+    public function trainee(){
+        return $this->hasMany('App\Trainee');
+    }
 }
